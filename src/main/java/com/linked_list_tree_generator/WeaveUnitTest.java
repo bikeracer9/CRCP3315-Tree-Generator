@@ -7,8 +7,8 @@ package com.linked_list_tree_generator;
 
 public class WeaveUnitTest {
 
-    TreeMelodyManager manager = new TreeMelodyManager(); //object reference to a MelodyManager class
-    TreeMelody melodyList = new TreeMelody(); //object reference to LinkedListMelody class
+    LinkedListMelodyManager manager = new LinkedListMelodyManager(); //object reference to a MelodyManager class
+    LinkedListMelody melodyList = new LinkedListMelody(); //object reference to LinkedListMelody class
 
     void testWeave1() 
     {
@@ -16,7 +16,7 @@ public class WeaveUnitTest {
         System.out.println("--------------------------");
         System.out.println("Test Weave 1: ");
 
-        for(int i = 0; i < manager.fileSize(); i++)
+        for(int i = 0; i < 12; i++)
         {
             melodyList.insertAtEnd( new MelodyNode(manager, 3));
         }

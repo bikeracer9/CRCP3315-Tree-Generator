@@ -36,7 +36,7 @@ public class App extends PApplet {
     ArrayList<Drawable> draws = new ArrayList<>(); 
 
     TreeMelodyManager manager = new TreeMelodyManager();
-    TreeMelody melody = new TreeMelody();
+    TreeMelody melody = new TreeMelody(manager);
 
     public static void main(String[] args) {
         PApplet.main("com.linked_list_music_template.App");       
@@ -49,6 +49,8 @@ public class App extends PApplet {
         manager.setup();
         addNodes();
         setupButtons();
+        melody.train();
+        melody.print();
         addMelodyDraw();
         
         

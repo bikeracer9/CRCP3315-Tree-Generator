@@ -29,13 +29,13 @@ import processing.core.PApplet;
  */
 public abstract class MelodyButton extends Button{
 
-    TreeMelody melody; //Linked List Melody to control
+    LinkedListMelody melody; //Linked List Melody to control
 
     //----- TEST WEAVE OBJECT DECLARATION
     WeaveUnitTest weaveUnitTest = new WeaveUnitTest();
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    MelodyButton(PApplet main_, TreeMelody melody_, String label_,float x_, float y_)
+    MelodyButton(PApplet main_, LinkedListMelody melody_, String label_,float x_, float y_)
     {
         super(main_, label_, x_, y_); 
         melody = melody_;
@@ -52,7 +52,7 @@ public abstract class MelodyButton extends Button{
 class PlayButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    PlayButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    PlayButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Play", x_, y_); 
     }
@@ -74,7 +74,7 @@ class PlayButton extends MelodyButton{
 class StopButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    StopButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    StopButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Stop", x_, y_); 
     }
@@ -101,7 +101,7 @@ class StopButton extends MelodyButton{
 class LoopTrueButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    LoopTrueButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    LoopTrueButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Turn ON Loop", x_, y_); 
     }
@@ -123,7 +123,7 @@ class LoopTrueButton extends MelodyButton{
 class LoopFalseButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    LoopFalseButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    LoopFalseButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Turn OFF Loop", x_, y_); 
     }
@@ -149,7 +149,7 @@ class LoopFalseButton extends MelodyButton{
 class TestWeaveButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    TestWeaveButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    TestWeaveButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "WeaveUnitTest", x_, y_); 
     }
@@ -171,7 +171,7 @@ class TestWeaveButton extends MelodyButton{
 class addMelody1Button extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    addMelody1Button(PApplet main_, TreeMelody melody_, float x_, float y_)
+    addMelody1Button(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Add Melody 1:", x_, y_); 
     }
@@ -194,7 +194,7 @@ class addMelody1Button extends MelodyButton{
 class weave_3_4_Button extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    weave_3_4_Button(PApplet main_, TreeMelody melody_, float x_, float y_)
+    weave_3_4_Button(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Weave(3,4)", x_, y_); 
     }
@@ -216,7 +216,7 @@ class weave_3_4_Button extends MelodyButton{
 class weave_2_1_Button extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    weave_2_1_Button(PApplet main_, TreeMelody melody_, float x_, float y_)
+    weave_2_1_Button(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Weave(2,1)", x_, y_); 
     }
@@ -238,7 +238,7 @@ class weave_2_1_Button extends MelodyButton{
 class weave_5_3_Button extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    weave_5_3_Button(PApplet main_, TreeMelody melody_, float x_, float y_)
+    weave_5_3_Button(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Weave(5,3)", x_, y_); 
     }
@@ -261,7 +261,7 @@ class weave_5_3_Button extends MelodyButton{
 class clearListButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    clearListButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    clearListButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Clear List:", x_, y_); 
     }
@@ -282,7 +282,7 @@ class clearListButton extends MelodyButton{
 class reverseListButton extends MelodyButton{
 
     //overload the constructor for the MelodyButon -- use the default size for height & width & color.
-    reverseListButton(PApplet main_, TreeMelody melody_, float x_, float y_)
+    reverseListButton(PApplet main_, LinkedListMelody melody_, float x_, float y_)
     {
         super(main_, melody_, "Reverse List:", x_, y_); 
     }

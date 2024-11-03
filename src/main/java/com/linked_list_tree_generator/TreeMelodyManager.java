@@ -38,11 +38,12 @@ public class TreeMelodyManager extends MelodyManager implements Drawable {
     static String prependPath = "mid"  + sys.getSeparator();
     static String appendType = ".mid";
 
-    //--
-    float tempo; 
-    String bus;
+    //changed 
+    float tempo = 120; 
+    String bus = "Bus 1"; //you need to make this match your own code / platform
 
-    //String[] files = {"motive1Am", "motive2Am", "motive3Am", "motive1E", "motive2E", "motive3Am", "motive3E", "motive4Am", "motive4E", "MaryHadALittleLamb"};
+
+    //String[] files = {"motive1Am", "motive2Am", "motive3Am", motive4Am, "motive1E", "motive2E", "motive3E", "motive4E", "Sinfonia_9_bwv795", "MaryHadALittleLamb"};
     //String[] files = { "Sinfonia_9_bwv795" };
     String[] files = {"MaryHadALittleLamb"};
 
@@ -161,10 +162,13 @@ public class TreeMelodyManager extends MelodyManager implements Drawable {
         return newPlayers; 
     }
 
-    //reparses all the files into melodies (ie, motives) with noteCount notes (or less)
-    void convertToMotivesAndReplace(int noteCount)
+    //reparses all the files into melodies (ie, motives) with noteCount notes (or less) 
+    //switched this to TreeMelodyNode because it gave me an error when I tried to complete 
+    //step #1 for the void train(int index, int motiveNoteCount) function. 
+    ArrayList<TreeMelodyNode> convertToMotivesAndReplace(int noteCount)
     {
         players = convertToMotives(noteCount);
+        return null;
     }
 
     //returns the melody (ie, midi pitch numbers) for player at index i -- for debugging
