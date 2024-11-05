@@ -32,7 +32,7 @@ public class TreeMelodyNode extends MelodyNode{
     }
 
     // Insert nodes into the tree – ie. Populate the tree with data. Each note handles adding its own child nodes.
-void addNextNodes( ArrayList<TreeMelodyNode> motives )
+public void addNextNodes( ArrayList<TreeMelodyNode> motives )
 {
     ArrayList<TreeMelodyNode> addNodes = new ArrayList<>();
     
@@ -55,6 +55,10 @@ void addNextNodes( ArrayList<TreeMelodyNode> motives )
 
 }
 
+public ArrayList<Integer> getMidiNotes() 
+{
+    return new ArrayList<>(midiNotes);
+}
 
 @Override
 public MelodyNode getNextMelodyNode() {
@@ -68,29 +72,28 @@ public MelodyNode getNextMelodyNode() {
 }
 
 // Print the tree in tree form. Each node prints its own data then calls to its own children to print theirs.
-void print(int spacesBefore, int index)
+void print(int spacesBefore)
 {
-
-    System.out.print(" ".repeat(spacesBefore) );
-    System.out.print(index + ":  [");
-    System.out.print(midiNotes);
-    System.out.println("] ");
-    System.out.println();
-
-        for(int i = 0; i < nodes.size(); i++)
+    for (int i = 0; i < spacesBefore; i++) 
+    {
+        System.out.print(" ");
+    
+        System.out.println("-- " + getMidiNotes());
+        
+        for (TreeMelodyNode node : nodes) 
         {
-            System.out.print(" ".repeat(spacesBefore+ 2) );
-            System.out.print("-- ");                         
-            nodes.get(i).print(spacesBefore + 2, i);  
+            node.print(spacesBefore + 1);
         }
-
-
     }
+        
+}
+
+
 
     //overload print
     public void print()
     {
-        print(0, 0);
+        print(0);
     }
 
 

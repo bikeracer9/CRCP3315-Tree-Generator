@@ -35,8 +35,9 @@ public class App extends PApplet {
     //all the objects that implement a draw
     ArrayList<Drawable> draws = new ArrayList<>(); 
 
+    LinkedListMelody melody = new LinkedListMelody();
     TreeMelodyManager manager = new TreeMelodyManager();
-    TreeMelody melody = new TreeMelody(manager);
+    TreeMelody treeMelody = new TreeMelody(manager);
 
     public static void main(String[] args) {
         PApplet.main("com.linked_list_music_template.App");       
@@ -49,8 +50,8 @@ public class App extends PApplet {
         manager.setup();
         addNodes();
         setupButtons();
-        melody.train();
-        melody.print();
+        treeMelody.train(0,4);
+        treeMelody.print();
         addMelodyDraw();
         
         
@@ -59,7 +60,7 @@ public class App extends PApplet {
     //adds the drawable melody objects to the draws array to call their draw() ie update()
     public void addMelodyDraw()
     {
-        draws.add( melody );
+        draws.add( treeMelody );
         draws.add( manager );
     }
 
